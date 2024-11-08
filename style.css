@@ -1,0 +1,67 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #008080;
+   
+}
+h1{
+    color:hsl(214, 94%, 51%);
+    font: 36.4px champ, Verdana, Arial;
+    text-shadow: 2px 2px 1px hsla(214, 20%, 10%, 100%), -2px 2px 1px hsla(214, 20%, 10%, 100%), -2px -2px 1px hsla(214, 20%, 10%, 100%), 2px -2px 1px hsla(214, 20%, 10%, 100%);
+}
+.game-info{
+    margin-bottom: 20px;
+}
+#start-button{
+   border-radius: 20px;
+   border: none;
+   background-color:black;
+   color: red;
+   padding: 10px;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.grid{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.hole{
+    width: 18vmin;
+    height: 18vmin;
+    background-color: #8b4513;
+    background: radial-gradient(circle, transparent 40%, #582704 40%);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(23, 20, 20, 0.5), 0 20px 40px rgba(112, 46, 46, 0.176);
+
+}
+.hole.active::after{
+    content:"🐹";
+    font-size: 3em;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    cursor: pointer;
+}
+.game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+}
